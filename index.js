@@ -7,9 +7,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/user/:id', (req, res) => {
-    const q = req.params    //요청 들어온 것 중(req) params 데이터를 q 변수에 넣어라
-    console.log(q.id)
-    res.json({'userid':q.id})
+    // const q = req.params    //요청 들어온 것 중(req) params 데이터를 q 변수에 넣어라
+    // console.log(q.id)
+
+    const q = req.query
+    console.log(q.q)
+    console.log(q.name)
+
+    res.json({'userid':q.name})
 
 })
 
