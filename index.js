@@ -6,15 +6,18 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.get('/user/:id', (req, res) => {
-    // const q = req.params    //요청 들어온 것 중(req) params 데이터를 q 변수에 넣어라
-    // console.log(q.id)
+app.get('/sound/:name', (req, res) => {
+    const { name } = req.params //한 번에 name이라는 키에 req.prams 값이 들어감
 
-    const q = req.query
-    console.log(q.q)
-    console.log(q.name)
-
-    res.json({'userid':q.name})
+    if(name == "dog"){
+        res.json({'sound' : '멍멍'})
+    } else if(name == "cat"){
+        res.json({'sound' : '야옹'})
+    } else if(name == "pig"){
+        res.json({'sound': '꿀꿀'})
+    } else{
+        res.json({'sound' : '알수없음'})
+    }
 
 })
 
