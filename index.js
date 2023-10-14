@@ -6,12 +6,15 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.get('/dog', (req, res) => {
-    res.json({'sound' : '멍멍'})
+app.get('/user/:id', (req, res) => {
+    const q = req.params    //요청 들어온 것 중(req) params 데이터를 q 변수에 넣어라
+    console.log(q.id)
+    res.json({'userid':q.id})
+
 })
 
 app.get('/cat', (req, res) => {
-    res.json({'sound' : '멍멍'})
+    res.json({'sound' : '야옹'})
 })
 
 
