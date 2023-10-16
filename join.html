@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    사용할 아이디 : <input type="text" id="userId"> <br> <br>
-    사용할 비밀번호 : <input type="password" id="userPw"> <br><br>
-    사용할 닉네임 : <input type="text" id="name"> <br><br>
+    <form method="POST" action="/longin">
+        사용할 아이디 : <input type="text" id="userId"> <br> <br>
+        사용할 비밀번호 : <input type="password" id="userPw"> <br><br>
+        사용할 닉네임 : <input type="text" id="name"> <br><br>
 
-    <input type="submit" value="회원가입하기" onclick="sendInfo()">
+        <input type="submit" value="회원가입하기" onclick="sendInfo()">
 
-    <script>
-        function sendInfo(){
-            var id = document.getElementById("userId").value;
-            var pw = document.getElementById("userPw").value;
-            var name = document.getElementById("name").value;
-
-            console.log(id);
-            console.log(pw);
-            console.log(name);
-
-        }
-    </script>
+    </form>
+    
 </body>
+
 </html>
